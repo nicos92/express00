@@ -1,0 +1,16 @@
+/* Grid system demo */
+.grid-system-demo {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.grid-system-demo__item {
+    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-secondary) 100%);
+    color: var(--md-sys-color-on-primary);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: 500;
+}

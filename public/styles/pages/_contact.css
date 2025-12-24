@@ -1,0 +1,75 @@
+/* Contacto Section */
+.contacto__formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.contacto__grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contacto__label {
+  font-size: var(--fs-base);
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.contacto__input,
+.contacto__textarea {
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--primary-color-light);
+  border-radius: 0.5rem;
+  font-size: var(--fs-base);
+  font-family: inherit;
+  background-color: var(--card-background-color);
+  color: var(--text-color);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contacto__input:focus,
+.contacto__textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.contacto__textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contacto__boton {
+  background-color: var(--primary-color);
+  color: var(--card-background-color);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: var(--fs-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  align-self: flex-start;
+}
+
+.contacto__boton:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.contacto__boton:active {
+  transform: translateY(0);
+}
+
+.contacto__mensaje-exito {
+  background-color: #10b981;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 500;
+}

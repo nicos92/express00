@@ -1,0 +1,145 @@
+/* Cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.card {
+    background: var(--md-sys-color-surface);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card--featured {
+    border: 2px solid var(--md-sys-color-primary);
+}
+
+.card--error {
+    background: var(--md-sys-color-error-container);
+    border: 2px solid var(--md-sys-color-error);
+    color: var(--md-sys-color-on-error-container);
+}
+
+.card--info {
+    background: var(--md-sys-color-secondary-container);
+    border: 2px solid var(--md-sys-color-secondary);
+    color: var(--md-sys-color-on-secondary-container);
+}
+
+.card__content {
+    padding: 1.5rem;
+    max-height: 30rem;
+}
+
+.card__title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--md-sys-color-on-surface);
+}
+
+.card__title--info {
+    color: var(--md-sys-color-on-secondary-container);
+}
+
+.card__subtitle {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.card__price {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--md-sys-color-primary);
+}
+
+.card__img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+.card__text {
+    color: var(--md-sys-color-on-surface-variant);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.card__button {
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.card__button:hover {
+    background: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+.card__button--featured {
+    background: var(--md-sys-color-secondary);
+    color: var(--md-sys-color-on-secondary);
+}
+
+.u-border-neon {
+    animation: neonGlow 2s linear infinite alternate;
+}
+
+/* 1. Contenedor Principal (Donde va el fondo) */
+.u-border-neon-spin {
+    position: relative;
+    overflow: hidden;
+    /* Fondo que se verá dentro del borde */
+    background-color: var(--md-sys-color-surface);
+    border-radius: 8px;
+}
+
+/* 2. Contenido de la tarjeta (Para que se vea por encima de la máscara) */
+/* Este es el fix clave para tu problema */
+.u-border-neon-spin>* {
+    position: relative;
+    z-index: 3;
+}
+
+/* 3. Pseudo-elemento de Gradiente Giratorio (El Color) */
+.u-border-neon-spin::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(#ff00ff, #00ffff, #ffcc00, #ff00ff);
+    animation: neonSpin 4s linear infinite;
+    z-index: 0;
+}
+
+/* 4. Pseudo-elemento de Máscara (El que oculta el centro) */
+.u-border-neon-spin::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    /* Usa el color de fondo del padre (paso 1) */
+    background: inherit;
+    border-radius: inherit;
+    z-index: 2;
+}

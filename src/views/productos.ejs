@@ -1,32 +1,36 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nosotros</title>
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <h1>Productos</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Titulo</th>
-                <th>Precio</th>
-                <th>Categoria</th>
-                <th>Descripción</th>
-            </tr>
-        </thead>
-        <tbody>
-        <% productos.forEach( p => {%>
-          <tr>
-            <td><%= p.title %></td>
-            <td><%= p.price %></td>
-            <td><%= p.category %></td>
-            <td><%= p.description %></td>
-          </tr>
-       <% }) %>
-        </tbody>
-    </table>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosotros</title>
+  <link rel="stylesheet" href="./styles/main.css" />
+</head>
+
+<body>
+  <h1>Productos</h1>
+
+
+  <section class="container">
+    <div class="card-grid">
+      <% productos.forEach( p=> { %>
+        <div class="card card--featured">
+          <div class="card__content">
+            <img src="<%= p.image %>" alt="<%= p.title %>" class="card__img" />
+            <h2 class="card__title">
+              <%= p.title %>
+            </h2>
+            <p class="card__price">$<%= p.price %>
+            </p>
+            <p class="card__text">
+              <%= p.description %>
+            </p>
+          </div>
+        </div>
+        <% }) %>
+    </div>
+  </section>
+</body>
+
 </html>

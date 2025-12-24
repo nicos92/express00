@@ -1,0 +1,52 @@
+/* Botones */
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.button--primary {
+  background: linear-gradient(
+    135deg,
+    var(--md-sys-color-primary) 0%,
+    var(--md-sys-color-on-primary-container) 100%
+  );
+  color: var(--md-sys-color-on-primary);
+  margin: 0.5rem;
+}
+
+.button--secondary {
+  background: var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.button--outline {
+  background: transparent;
+  border-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-primary);
+  font-size: 18px;
+}
+
+.button--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button:hover:not(.button--disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}

@@ -1,0 +1,26 @@
+/* Hero section */
+.hero {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero__title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(
+        135deg,
+        var(--md-sys-color-primary) 0%,
+        var(--md-sys-color-on-primary-container) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero__subtitle {
+    font-size: 1.25rem;
+    color: var(--md-sys-color-on-surface-variant);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+}

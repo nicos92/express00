@@ -1,0 +1,25 @@
+@keyframes autoRotate {
+    to {
+        --deg: 360deg
+    }
+}
+
+@keyframes neonSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes neonGlow {
+    from {
+        box-shadow: 0 0 4px #00f, 0 0 4px #00f;
+    }
+
+    to {
+        box-shadow: 0 0 8px #f0f, 0 0 8px #f0f;
+    }
+}

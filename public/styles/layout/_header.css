@@ -1,0 +1,33 @@
+/* Header */
+.header {
+    background: var(--accent-color);
+    color: var(--on-accent-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-md);
+}
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    display: inline-flex;
+    color: white;
+    text-decoration: none;
+}
+
+.header__logo__icon {
+    margin-right: 0.5rem;
+    filter: drop-shadow(0px 0px 1px #ffd62e);
+}
+
+.header__logo__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--on-accent-color);
+}

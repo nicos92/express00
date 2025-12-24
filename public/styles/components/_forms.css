@@ -1,0 +1,68 @@
+/* Formularios */
+.form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form__group {
+    margin-bottom: 1.5rem;
+}
+
+.form__label {
+    display: block;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    color: var(--md-sys-color-on-surface);
+}
+
+.form__input,
+.form__select,
+.form__textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--md-sys-color-outline);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+}
+
+.form__input:focus,
+.form__select:focus,
+.form__textarea:focus {
+    outline: none;
+    border-color: var(--md-sys-color-primary);
+    box-shadow: 0 0 0 3px var(--md-sys-color-primary-container);
+}
+
+.form__textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form__group--inline {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form__checkbox,
+.form__radio {
+    width: 18px;
+    height: 18px;
+}
+
+.form__checkbox-label,
+.form__radio-label {
+    cursor: pointer;
+    user-select: none;
+}
+
+.form__actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}

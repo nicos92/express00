@@ -1,0 +1,35 @@
+.u-m-1 {
+    margin: .5rem;
+}
+
+.u-m-2 {
+    margin: 1rem;
+}
+
+.u-m-3 {
+    margin: 1.5rem;
+}
+
+.u-m-4 {
+    margin: 2rem;
+}
+
+.u-m-5 {
+    margin: 2.5rem;
+}
+
+.u-m-x-1{
+    margin: 0 1rem;
+}
+
+.u-m-x-2{
+    margin: 0 2rem;
+}
+
+.u-m-y-1{
+    margin: 1rem 0;
+}
+
+.u-m-y-2{
+    margin: 2rem 0;
+}

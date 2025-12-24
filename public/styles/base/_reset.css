@@ -1,0 +1,403 @@
+/* ==========================================================================
+   CSS RESET MODERNO - VERSIÓN 2.0
+   Combina lo mejor de:
+   - Normalize.css (preserva defaults útiles)
+   - Modern Reset (enfoque actualizado)
+   - Mejores prácticas 2024
+   ========================================================================== */
+
+/* 1. RESET BÁSICO DE MÁRGENES Y PADDING
+   ========================================================================== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. NORMALIZACIÓN DE ELEMENTOS HTML5
+   ========================================================================== */
+html {
+    /* Suavizado de scroll (opcional, mejora UX) */
+    scroll-behavior: smooth;
+
+    /* Prevenir ajuste de tamaño de texto en iOS */
+    -webkit-text-size-adjust: 100%;
+
+    /* Mejor renderizado de fuentes */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 3. TAMAÑO DE CAJA CONSISTENTE
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+}
+
+/* 4. QUITAR ESTILOS POR DEFECTO DE LISTAS
+   ========================================================================== */
+ul,
+ol {
+    list-style: none;
+}
+
+/* 5. QUITAR SUBRAYADO DE ENLACES
+   ========================================================================== */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 6. IMÁGENES RESPONSIVAS POR DEFECTO
+   ========================================================================== */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 7. EVITAR DESBORDAMIENTO HORIZONTAL
+   ========================================================================== */
+body {
+    overflow-x: hidden;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* 8. FORMULARIOS - QUITAR ESTILOS POR DEFECTO
+   ========================================================================== */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+/* 9. MEJORAS ESPECÍFICAS PARA BOTONES
+   ========================================================================== */
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+/* 10. TABLAS - COLAPSAR BORDES
+   ========================================================================== */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 11. QUITAR APARIENCIA NATIVA EN INPUTS ESPECÍFICOS
+   ========================================================================== */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+
+/* 12. MEDIA ELEMENTS
+   ========================================================================== */
+audio,
+video {
+    display: inline-block;
+}
+
+/* 13. IFRAMES - EVITAR BORDES
+   ========================================================================== */
+iframe {
+    border: 0;
+}
+
+/* 14. QUITAR ESTILOS DE CITAS
+   ========================================================================== */
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: '';
+    content: none;
+}
+
+/* 15. PREVENT TEXT OVERFLOW
+   ========================================================================== */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 16. ROOT STACKING CONTEXT
+   ========================================================================== */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* 17. MEJORAS DE ACCESIBILIDAD
+   ========================================================================== */
+
+/* Ocultar contenido visualmente pero mantener accesible para screen readers */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Mejorar focus visibility para navegación con teclado */
+:focus-visible {
+    outline: 2px solid #4d90fe;
+    outline-offset: 2px;
+}
+
+/* Quitar outline por defecto pero mantenerlo para navegación por teclado */
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* 18. NORMALIZACIÓN DE ELEMENTOS INTERACTIVOS
+   ========================================================================== */
+
+/* Quitar estilos nativos en navegadores WebKit */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* 19. MEJORAS DE RENDIMIENTO
+   ========================================================================== */
+
+/* Suavizado de animaciones */
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        scroll-behavior: smooth;
+    }
+}
+
+/* 20. SELECTORES ESPECÍFICOS PARA FRAMEWORKS POPULARES
+   ========================================================================== */
+
+/* React - normalización */
+[data-reactroot] {
+    height: 100%;
+}
+
+/* 21. CLASES DE UTILIDAD PARA RESET
+   ========================================================================== */
+
+/* Reset para contenedores flex/grid */
+.flex-reset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-reset {
+    display: grid;
+    place-items: center;
+}
+
+/* 22. MEDIA QUERIES PARA DISPOSITIVOS TÁCTILES
+   ========================================================================== */
+
+/* Mejorar experiencia táctil */
+@media (hover: none) and (pointer: coarse) {
+
+    input,
+    textarea,
+    select,
+    button {
+        font-size: 16px;
+        /* Previene zoom automático en iOS */
+    }
+}
+
+/* 23. DARK MODE SUPPORT
+   ========================================================================== */
+
+/* Transiciones suaves para modo oscuro/claro */
+:root {
+    color-scheme: light dark;
+}
+
+/* 24. IMPRIMIR
+   ========================================================================== */
+
+/* Evitar que elementos no esenciales se impriman */
+@media print {
+
+    *,
+    *::before,
+    *::after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]::after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]::after {
+        content: " (" attr(title) ")";
+    }
+
+    /* Evitar que enlaces rotos se impriman */
+    a[href^="#"]::after,
+    a[href^="javascript:"]::after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+/* 25. RESET PARA ELEMENTOS DE TEXTO
+   ========================================================================== */
+
+/* Prevenir overflow en textos largos */
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: auto;
+}
+
+/* 26. MEJORAS PARA FORMULARIOS MODERNOS
+   ========================================================================== */
+
+/* Placeholder styling consistente */
+::placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+/* Autocomplete styling en navegadores modernos */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: currentColor;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* 27. NORMALIZACIÓN DE ELEMENTOS EMBEBIDOS
+   ========================================================================== */
+
+/* Asegurar que elementos embebidos sean responsive */
+embed,
+object {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 28. CLASE DE RESET COMPLETO (opcional, usar con cuidado)
+   ========================================================================== */
+
+/* Reset completo para componentes que necesitan empezar de cero */
+.reset-all {
+    all: initial;
+    box-sizing: border-box;
+}
+
+/* 29. SOPORTE PARA MODERNAS CARACTERÍSTICAS CSS
+   ========================================================================== */
+
+/* Container queries support */
+@supports (container-type: inline-size) {
+    .container-component {
+        container-type: inline-size;
+    }
+}
+
+/* 30. MEJORAS DE SEMÁNTICA Y ACCESIBILIDAD
+   ========================================================================== */
+
+/* Mejorar legibilidad en todos los dispositivos */
+main {
+    display: block;
+    /* Para IE11 */
+}
+
+/* ==========================================================================
+   FIN DEL RESET CSS
+   A partir de aquí, comienza tu CSS personalizado
+   ========================================================================== */
