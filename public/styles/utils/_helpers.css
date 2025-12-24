@@ -1,3 +1,19 @@
+.custom-tooltip {
+    position: absolute;
+    background: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    max-width: 250px;
+    z-index: 1000;
+    pointer-events: none;
+    /* Evita que el tooltip interfiera con el mouse */
+    display: none;
+    /* Oculto por defecto */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
 .u-m-1 {
     margin: .5rem;
 }
@@ -18,18 +34,18 @@
     margin: 2.5rem;
 }
 
-.u-m-x-1{
+.u-m-x-1 {
     margin: 0 1rem;
 }
 
-.u-m-x-2{
+.u-m-x-2 {
     margin: 0 2rem;
 }
 
-.u-m-y-1{
+.u-m-y-1 {
     margin: 1rem 0;
 }
 
-.u-m-y-2{
+.u-m-y-2 {
     margin: 2rem 0;
 }

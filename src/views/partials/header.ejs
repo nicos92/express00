@@ -1,0 +1,33 @@
+<header className="header" role="banner">
+    <div className="container">
+        <div className="header__content">
+            <Link to="/" className="header__logo">
+            <MiIconoSVG className="header__logo__icon" />
+            <h1 className="header__logo__title">Express EJS</h1>
+            </Link>
+
+            <nav className="main-nav" role="navigation" aria-label="Navegación principal">
+                <ul className="main-nav__list">
+
+                    <li className="main-nav__item">
+                        <a href="/" className="main-nav__link">
+                            Inicio
+                        </a>
+                    </li>
+                    <li className="main-nav__item">
+                        <a href="/productos" className="main-nav__link">
+                            Productos
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button className="menu-toggle" aria-label="Menú móvil" aria-expanded={isMenuOpen}
+                onClick={handleMenuToggle}>
+                <span className="menu-toggle__bar"></span>
+                <span className="menu-toggle__bar"></span>
+                <span className="menu-toggle__bar"></span>
+            </button>
+        </div>
+    </div>
+</header>

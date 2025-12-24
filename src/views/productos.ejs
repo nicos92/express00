@@ -1,36 +1,22 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nosotros</title>
-  <link rel="stylesheet" href="./styles/main.css" />
-</head>
-
-<body>
-  <h1>Productos</h1>
+<h1>Productos</h1>
 
 
-  <section class="container">
-    <div class="card-grid">
-      <% productos.forEach( p=> { %>
-        <div class="card card--featured">
-          <div class="card__content">
-            <img src="<%= p.image %>" alt="<%= p.title %>" class="card__img" />
-            <h2 class="card__title">
-              <%= p.title %>
-            </h2>
-            <p class="card__price">$<%= p.price %>
-            </p>
-            <p class="card__text">
-              <%= p.description %>
-            </p>
-          </div>
+<section class="container">
+  <article class="card-grid">
+    <% productos.forEach( p=> { %>
+      <div class="card card--featured">
+        <div class="card__content">
+          <img src="<%= p.image %>" alt="<%= p.title %>" class="card__img" />
+          <h2 class="card__title">
+            <%= p.title %>
+          </h2>
+          <p class="card__price">$<%= p.price %>
+          </p>
+          <p class="card__text" data-fulltext="<%= p.description %>">
+            <%= p.description %>
+          </p>
         </div>
-        <% }) %>
-    </div>
-  </section>
-</body>
-
-</html>
+      </div>
+      <% }) %>
+  </article>
+</section>
