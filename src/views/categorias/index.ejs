@@ -1,0 +1,55 @@
+<h1>Categorias</h1>
+<h2><a href="/categorias/create">Crear Categoria</a></h2>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Categoria</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% categorias.forEach( c=> { %>
+            <tr>
+                <td>
+                    <a href="/categorias/<%= c.id %>">
+
+                        <%= c.id %>
+                    </a>
+                </td>
+                <td>
+                    <a href="/categorias/<%= c.id %>">
+
+                        <%= c.categoria %>
+                    </a>
+                </td>
+                <td>
+                    <a href="/categorias/<%= c.id %>/edit">
+
+                        Editar
+                    </a>
+                </td>
+                <td>
+                    <form class="form--delete" action="/categorias/<%= c.id %>?_method=DELETE" method="post">
+
+                        <button class="button button--primary" type="submit">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+
+            <% }) %>
+
+    </tbody>
+</table>
+
+<script>
+    document.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (e.target.classList.contains('form--delete')) {
+            if (confirm('¿Estas seguro que querés eliminar?')) {
+                e.target.submit()
+            }
+        }
+    })
+</script>

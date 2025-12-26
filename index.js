@@ -9,8 +9,11 @@ import 'dotenv/config'
 import mainRouter from './src/routes/main.router.js'
 import productosRouter from './src/routes/productos.router.js'
 import contactoRouter from './src/routes/contacto.router.js'
+import categoriaRouter from './src/routes/categoria.routes.js'
 
 const app = express()
+import methodOverride from 'method-override'
+app.use(methodOverride('_method'))
 app.use(express.urlencoded())
 app.use(express.static(path.join(__dirname, 'public')))
 
@@ -23,6 +26,7 @@ app.set('layout', 'layouts/layout')
 app.use(mainRouter)
 app.use('/productos', productosRouter)
 app.use('/contacto', contactoRouter)
+app.use('/categorias', categoriaRouter)
 const PORT = process.env.PORT || 3001
 
 app.listen(PORT, () => {
