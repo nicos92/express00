@@ -1,0 +1,34 @@
+[
+  {
+    "id": "15caee70-d6d2-415c-affb-2e32471669a4",
+    "categoria": "panificado"
+  },
+  {
+    "id": "4663f8ed-eab0-4d25-9fa6-792695e2df89",
+    "categoria": "fideos"
+  },
+  {
+    "id": "672008c3-df3e-455d-a5b3-3492a52baa31",
+    "categoria": "quesos"
+  },
+  {
+    "id": "c5b0d187-4b8b-46b1-9fed-af829e475dab",
+    "categoria": "limpieza"
+  },
+  {
+    "id": "f33aaf2e-553f-4e2a-8e20-3e43b4d838b6",
+    "categoria": "fiambres"
+  },
+  {
+    "id": "00089fd2-07e7-41bd-8bb6-e4eca52e1914",
+    "categoria": "golocinas"
+  },
+  {
+    "id": "4bfc778e-aef4-40f4-90b7-b21dff67b820",
+    "categoria": "bebidas"
+  },
+  {
+    "id": "86db0166-efab-4da8-8c11-13168320fff8",
+    "categoria": "almacen"
+  }
+]
